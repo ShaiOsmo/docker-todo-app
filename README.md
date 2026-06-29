@@ -1,33 +1,32 @@
 # 🐳 Docker Todo App
 
-A command-line Task Manager application built with **Python** to demonstrate **Docker**, **Docker Volumes**, and persistent data storage.
+A command-line Task Manager application built with **Python** to demonstrate **Docker Containers**, **Docker Volumes**, and persistent data storage.
+
+This project was developed as part of my DevOps learning journey and focuses on understanding how Docker manages containers and persistent storage.
 
 ---
 
-# 📖 About
+## ✨ Features
 
-This project was developed as part of my DevOps learning journey.
+* ➕ Add new tasks
+* 📋 View all tasks
+* ✏️ Edit existing tasks
+* 🗑 Delete tasks
+* ✅ Mark tasks as completed
+* 🔴 Priority levels (Low / Medium / High)
+* 📅 Due date validation
+* 🔁 Recurring tasks
 
-The application allows users to manage daily tasks while demonstrating how Docker containers work and how Docker Volumes preserve data even after containers are removed.
-
----
-
-# ✨ Features
-
-* Add new tasks
-* Display tasks
-* Edit existing tasks
-* Delete tasks
-* Mark tasks as completed
-* Priority levels (Low / Medium / High)
-* Due date validation
-* One-time and recurring tasks
-* Statistics Dashboard
-* JSON persistent storage
+  * One-time
+  * Daily
+  * Weekly
+  * Monthly
+* 📊 Statistics Dashboard
+* 💾 JSON-based data persistence
 
 ---
 
-# 🛠 Technologies
+## 🛠 Technologies
 
 * Python 3
 * Docker
@@ -36,9 +35,9 @@ The application allows users to manage daily tasks while demonstrating how Docke
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```
+```text
 docker-todo-app
 │
 ├── app
@@ -55,7 +54,7 @@ docker-todo-app
 
 ---
 
-# 🚀 Build Docker Image
+## 🚀 Build the Docker Image
 
 ```bash
 docker build -t todo-app .
@@ -63,7 +62,7 @@ docker build -t todo-app .
 
 ---
 
-# ▶ Run Container
+## ▶️ Run the Application
 
 ```bash
 docker run -it --name todo todo-app
@@ -71,11 +70,17 @@ docker run -it --name todo todo-app
 
 ---
 
-# 💾 Run With Docker Volume
+## 💾 Run with Docker Volume
+
+Create a Docker Volume:
 
 ```bash
 docker volume create todo-data
+```
 
+Run the application with persistent storage:
+
+```bash
 docker run -it --name todo \
 -v todo-data:/app/app/data \
 todo-app
@@ -83,27 +88,9 @@ todo-app
 
 ---
 
-# 🧪 What I Learned
+## 🧪 Docker Volume Demonstration
 
-During this project I learned:
-
-* Writing Dockerfiles
-* Building Docker Images
-* Running Containers
-* Difference between Images and Containers
-* Docker Volumes
-* Persistent Storage
-* JSON file handling
-* CRUD operations in Python
-* Input validation
-* Working with dates
-* Command Line applications
-
----
-
-# 🐳 Docker Volume Demonstration
-
-Without Docker Volume:
+### Without Docker Volume
 
 ```
 Container
@@ -113,7 +100,7 @@ tasks.json
 
 Deleting the container also deletes the stored tasks.
 
-With Docker Volume:
+### With Docker Volume
 
 ```
 Container
@@ -123,20 +110,41 @@ Docker Volume
 tasks.json
 ```
 
-Deleting the container does **NOT** delete the stored tasks.
+Deleting the container **does not** delete the stored tasks.
 
 ---
 
-# 🔮 Future Improvements
+## 📚 What I Learned
+
+During this project I practiced:
+
+* Creating Docker Images
+* Writing Dockerfiles
+* Running and managing Docker Containers
+* Understanding the difference between Images and Containers
+* Using Docker Volumes for persistent storage
+* CRUD operations in Python
+* JSON file handling
+* Input validation
+* Date validation
+* Building a command-line application
+
+---
+
+## 🔮 Future Improvements
 
 * Docker Compose
 * Flask Web Interface
 * SQLite Database
 * REST API
 * User Authentication
-* Categories
-* Search & Filtering
+* Categories & Search
+* Task Filtering
 
 ---
 
-Developed as a personal DevOps practice project.
+## 👩‍💻 Author
+
+**Shai Osmo**
+
+Software Engineering Graduate | Python | Docker | DevOps Learning Journey
